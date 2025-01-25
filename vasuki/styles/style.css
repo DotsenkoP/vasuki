@@ -1,0 +1,393 @@
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Golos Text", "Arial", sans-serif;
+  display: flex;
+  padding: 0;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.header {
+  width: 100%;
+  min-height: 700px;
+  background-image: url("../images/background-header.png");
+  background-size: cover;
+  background-position: center;  
+  display: flex;
+  flex-direction: column;
+}
+
+.header__section {
+  margin-left: 72px;
+  margin-top: 26px;
+  max-width: 542px;
+  min-height: 100%; /* Высота по родителю */
+  display: flex; /* Центрируем содержимое */
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box; /* Учитываем padding и border */
+
+
+}
+
+.logo {
+  text-decoration: none;
+  width: 245px;
+}
+
+.logo-text {
+  color: #595653;
+  font-size: 16.65px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.header-title {
+  font-size: 60px;
+  margin: 62px 0 24px;
+}
+
+.description {
+  text-align: center;
+  font-size: 18px;
+  line-height: 130%;
+  margin-bottom: 40px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.button {
+  width: 263px;
+  padding: 18px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 66px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button-primary {
+  background-color: #000;
+  color: #fff;
+}
+
+.button-primary:hover {
+  background-color: #333;
+}
+
+.button-secondary {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.button-secondary:hover {
+  background-color: #f4f4f4;
+}
+
+.marquee {
+  width: 100%;
+  background-color: #ff5533;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.marquee span {
+  display: inline-block;
+  animation: marquee 15s linear infinite;
+  font-size: 22px;
+  margin: 18px;
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.about-lecture {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 72px;
+}
+
+.about-lecture__text {
+  font-size: 36px;
+  margin-right: 64px;
+}
+
+.second-font {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.red-text {
+  color: #f54932;
+  font-weight: bold;
+}
+
+.align-center {
+  text-align: center;
+  
+}
+
+.event {
+  display: flex;
+  gap: 40px;
+  max-height: 527px;
+
+}
+
+.event-title {
+  text-align: left;
+  font-size: 36px; 
+  margin-bottom: 20px;
+  line-height: 135%;
+  margin-bottom: 60px;
+}
+
+.chess-event {
+  max-width: 704px; /* Максимальная ширина секции */
+  margin: 0 auto; /* Центрируем секцию */
+  font-family: "Arial", sans-serif;
+}
+
+.event-details {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 16px; /* Уменьшен шрифт для компактности */
+}
+
+.event-details td {
+  padding: 12px 10px; /* Просторное оформление */
+  vertical-align: middle; /* Выравнивание текста по центру ячейки */
+}
+
+.red-line {
+  text-decoration-color: red;
+}
+
+.event-details td:first-child {
+  
+  text-align: left;
+  width: 50%;
+}
+
+.event-details td:last-child {
+  text-align: left;
+  font-weight: bold;
+}
+
+tr td:first-child {
+  border-right: 2px solid #D0D0D0;
+}
+
+tr:not(:last-child) td {
+  border-bottom: 2px solid #D0D0D0;
+}
+
+.contact-info {
+  margin-top: 48px;
+  text-align: center;
+  font-size: 20px; 
+  color: #3057A2;
+  text-align: left;
+}
+
+.transformation-stages {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.transformation-stages h2 {
+  font-size: 54px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.transformation-stages .subtitle {
+  display: inline-block;
+  font-size: 16px;
+  color: #3057A2;
+  margin-top: 5px;
+}
+
+.stages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.stage-item {
+  background-color: #E9DED4;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.stage-number {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stage-item p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* Стили для третьей ячейки (вытянута по высоте) */
+.stage-item-tall {
+  grid-row: span 2;
+}
+
+/* Стили для седьмой ячейки (вытянута по ширине) */
+.stage-item-wide {
+  grid-column: span 2;
+}
+
+.stage-text-p {
+  width: 445px;
+}
+
+.stage-image {
+  position: absolute;
+  top: 345px;
+  right: -60px;
+  margin-top: 30px;
+  width: 376px;
+  max-width: 100%;
+  height: auto;
+}
+
+.players {
+  font-size: 54px;
+  position: relative;
+}
+
+.carousel-controls {
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  right: 55px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  gap: 15px;
+}
+
+.carousel-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1165px;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+  margin-bottom: 140px;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 1s ease;
+}
+
+.carousel-item {
+  flex: 0 0 33.33%; /* Показываем 3 элемента */
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  max-width: 394px;
+  min-height: 462px;
+}
+
+.carousel-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.player {
+  font-size: 24px;
+}
+
+.titel {
+  font-size: 20px;
+}
+
+.player-more-info {
+  padding: 12px;
+  color: #3057A2; 
+  font-size: 16px;
+  border: 2px solid #3057A2; 
+  border-radius: 62px; 
+}
+
+.button-contols {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-contols:hover {
+  background-color: #555;
+}
+
+.carousel-indicator {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.footer {
+  width: 100%;
+  background-color: #E9DED4;
+}
+
+.footer p {
+  margin: 40px 72px 72px;
+}
+
